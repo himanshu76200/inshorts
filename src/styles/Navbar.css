@@ -1,0 +1,14 @@
+.navbar {
+    height: 72px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%);
+    display: flex;
+    align-items: center;
+}
+
+.navbar > img {
+    height: 97%;
+}
+
+.icon {
+    flex: 0.5;
+}
