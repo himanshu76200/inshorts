@@ -6,10 +6,7 @@ import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 
 import categories from "./data/category";
 
@@ -25,7 +22,8 @@ const useStyles = makeStyles({
     },
 });
 
-export default function TemporaryDrawer() {
+export default function TemporaryDrawer({ setCategory }) {
+
     const classes = useStyles();
     const [state, setState] = React.useState({
         left: false,
@@ -63,10 +61,11 @@ export default function TemporaryDrawer() {
             <List>
                 <ListItem>Categories</ListItem>
             </List>
+            <Divider />
             <List>
-                {categories.map((index) => (
-                    <ListItem button key={index}>
-                        <ListItemText primary={index} />
+                {categories.map((text, index) => (
+                    <ListItem button onClick={() => setCategory(text)} key={text}>
+                        <ListItemText primary={text} />
                     </ListItem>
                 ))}
             </List>

@@ -2,11 +2,11 @@ import React from 'react';
 import Sidebar from "./Sidebar";
 import "../styles/Navbar.css";
 
-function Navbar() {
+function Navbar({ setCategory }) {
     return (
         <div className="navbar">
             <div className="icon">
-                <Sidebar />
+                <Sidebar setCategory={setCategory} />
             </div>
             <img src="https://assets.inshorts.com/website_assets/images/logo_inshorts.png" alt="icon"></img>
         </div>
