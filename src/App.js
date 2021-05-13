@@ -40,7 +40,7 @@ function App() {
   return (
     <div className="App">
       <Navbar setCategory={setCategory} />
-      <Content />
+      <Content news={news} />
     </div>
   );
 }

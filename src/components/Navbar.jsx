@@ -8,7 +8,7 @@ function Navbar({ setCategory }) {
             <div className="icon">
                 <Sidebar setCategory={setCategory} />
             </div>
-            <img src="https://assets.inshorts.com/website_assets/images/logo_inshorts.png" alt="icon"></img>
+            <img className="inshortImage" src="https://assets.inshorts.com/website_assets/images/logo_inshorts.png" alt="icon"></img>
         </div>
     )
 }

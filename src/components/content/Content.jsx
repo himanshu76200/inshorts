@@ -1,8 +1,9 @@
 import { Container } from '@material-ui/core';
 import React from 'react';
+import NewsCard from '../NewsCard/NewsCard';
 import './Content.css';
 
-function Content() {
+function Content({ news }) {
     return (
         <Container maxWidth="md">
             <div className="content">
@@ -13,8 +14,11 @@ function Content() {
                     <img src="https://assets.inshorts.com/website_assets/images/appstore.png" alt="app store" />
                     <img src="https://assets.inshorts.com/website_assets/images/playstore.png" alt="play store" />
                 </div>
-            </div>
+                {news.map((newsItem, index) => (
+                    <NewsCard newsItem={newsItem} key={index} />
+                ))}
 
+            </div>
         </Container>
     )
 }
