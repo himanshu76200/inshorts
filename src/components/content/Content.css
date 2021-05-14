@@ -12,6 +12,11 @@
 
 .content__ad > img {
     height: 80%;
+    /* margin-top: 140px; */
+}
+
+.content__ad {
+    margin-top: 90px;
 }
 
 .ad__text {

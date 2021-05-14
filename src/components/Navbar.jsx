@@ -4,11 +4,11 @@ import "../styles/Navbar.css";
 
 function Navbar({ setCategory }) {
     return (
-        <div className="navbar">
+        <div className="navbar sticky">
             <div className="icon">
                 <Sidebar setCategory={setCategory} />
             </div>
-            <img className="inshortImage" src="https://assets.inshorts.com/website_assets/images/logo_inshorts.png" alt="icon"></img>
+            <img src="https://assets.inshorts.com/website_assets/images/logo_inshorts.png" alt="icon"></img>
         </div>
     )
 }
